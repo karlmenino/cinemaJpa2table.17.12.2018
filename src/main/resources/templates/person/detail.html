@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Détails</h1>
+<h2><span th:text="${personne.getPrenom()}">Paul</span> <span th:text="${personne.getNom()}"></span> </h2>
+<h2>Année de naissance : <span th:text="${personne.getNaissance()}">1890</span></h2>
+<h3 th:each="film:${personne.films}" th:text="${film.getTitle()}"></h3>
+</body>
+</html>
